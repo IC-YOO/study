@@ -1,0 +1,122 @@
+body .hljs:not(body.dark-mode .hljs) {
+  --seogun_bg: #f7f7f7;
+  --seogun_text1: #1b1b1b;
+  --seogun_light-blue2: #1a7fa7;
+  --seogun_light-blue: #37adb5;
+  --seogun_skyblue: #0482eb;
+  --seogun_light-red: #ff4f20;
+  --seogun_light-pink: #fa2773;
+  --seogun_pink: #d1004b;
+  --seogun_light-purple2: #c556ff;
+  --seogun_light-purple: #7e22b8;
+  --seogun_purple: #4b1c9d;
+  --seogun_light-green: #72a608;
+  --seogun_deep-green: #6ea46f;
+  --seogun_orange: #f26902;
+  --seogun_light-orange: #d48203;
+}
+
+body.dark-mode .hljs {
+  --seogun_bg: #26272c;
+  --seogun_text1: #ffffff;
+  --seogun_light-blue2: #b3ccd6;
+  --seogun_light-blue: #88ddff;
+  --seogun_skyblue: #61aeee;
+  --seogun_light-red: #ff8282;
+  --seogun_light-pink: #ff669d;
+  --seogun_pink: #f92672;
+  --seogun_light-purple2: #e7b9ff;
+  --seogun_light-purple: #c791e9;
+  --seogun_purple: #7e57c2;
+  --seogun_light-green: #c2e78d;
+  --seogun_deep-green: #529a54;
+  --seogun_orange: #fd971f;
+  --seogun_light-orange: #fbc86b;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1.2em;
+  color: var(--seogun_text1);
+  background: var(--seogun_bg);
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-constructor,
+.hljs-selector-tag {
+  color: var(--seogun_light-orange);
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--seogun_deep-green);
+  font-style: italic;
+}
+
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-strin {
+  color: var(--seogun_light-blue2);
+}
+.hljs-tag {
+  color: var(--seogun_light-blue);
+}
+
+.hljs-operator {
+  color: var(--seogun_light-pink);
+}
+
+.hljs-pattern-match,
+.hljs-pattern-match .hljs-constructor,
+.hljs-literal,
+.hljs-class .hljs-title,
+.hljs-keyword {
+  color: var(--seogun_skyblue);
+}
+
+.hljs-function,
+.hljs-doctag,
+.hljs-formula,
+.hljs-selector-pseudo,
+.hljs-attr,
+.hljs-built_in {
+  color: var(--seogun_light-purple);
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id {
+  color: var(--seogun_light-purple2);
+}
+
+.hljs-function .hljs-params,
+.hljs-string {
+  color: var(--seogun_light-green);
+}
+
+.hljs-function .hljs-params .hljs-typing {
+  color: var(--seogun_orange);
+}
+
+.hljs-module-access .hljs-module {
+  color: var(--seogun_light-purple);
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-deletion,
+.hljs-subst,
+.hljs-number,
+.hljs-regexp,
+.hljs-addition,
+.hljs-meta-string {
+  color: var(--seogun_light-red);
+}

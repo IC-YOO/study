@@ -1,0 +1,205 @@
+/* 접은글 꾸미기 */
+
+.btn-toggle-moreless,
+.btn_more,
+.btn_less {
+  background: #818181; /*버튼 배경색*/
+}
+.btn-toggle-moreless,
+.btn_more,
+.btn_less {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  padding: 5px 7px; /*버튼 안쪽 패딩(간격 띄우기*/
+  border-radius: 8px; /*버튼 둥근 정도*/
+  border-style: double;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #000 !important; /*버튼의 더보기 글씨색. 검정색(흰색은 #fff)*/
+  font-size: 15px !important; /*버튼의 글씨크기*/
+}
+div[data-ke-type='moreLess'] {
+  position: relative;
+}
+div[data-ke-type='moreLess']::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px dashed #818181; /*펼치기 전 점선(펼친 후 상단 점선)*/
+  margin-top: 30px;
+}
+.moreless-content {
+  padding: 15px 5px;
+  border-bottom: 2px dashed #818181; /*펼친 후 하단 점선*/
+  margin-bottom: 20px;
+}
+.btn-toggle-moreless:before,
+.btn_more:before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M256 192l-39.5-39.5c4.9-12.6 7.5-26.2 7.5-40.5C224 50.1 173.9 0 112 0S0 50.1 0 112s50.1 112 112 112c14.3 0 27.9-2.7 40.5-7.5L192 256l-39.5 39.5c-12.6-4.9-26.2-7.5-40.5-7.5C50.1 288 0 338.1 0 400s50.1 112 112 112s112-50.1 112-112c0-14.3-2.7-27.9-7.5-40.5L499.2 76.8c7.1-7.1 7.1-18.5 0-25.6c-28.3-28.3-74.1-28.3-102.4 0L256 192zm22.6 150.6L396.8 460.8c28.3 28.3 74.1 28.3 102.4 0c7.1-7.1 7.1-18.5 0-25.6L342.6 278.6l-64 64zM64 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm48 240a48 48 0 1 1 0 96 48 48 0 1 1 0-96z'/%3E%3C/svg%3E");
+  /*버튼이 접혀있을 때 앞에 붙일 아이콘*/
+  margin-right: 5px;
+}
+.open .btn-toggle-moreless:before,
+.btn_less:before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16' width='16' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM377 271c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-87-87-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 167c9.4-9.4 24.6-9.4 33.9 0L377 271z'/%3E%3C/svg%3E");
+  /*버튼을 닫을 때 앞에 붙일 아이콘*/
+  margin-right: 5px;
+}
+
+/* 댓글 아바타 치환 */
+
+[src*='profile_default_00'],
+[style*='profile_default_00'] {
+  background-image: url('./images/Avatar-1.svg');
+  content: url('./images/Avatar-1.svg');
+}
+
+[src*='profile_default_01'],
+[style*='profile_default_01'] {
+  background-image: url('./images/Avatar-2.svg');
+  content: url('./images/Avatar-2.svg');
+}
+
+[src*='profile_default_02'],
+[style*='profile_default_02'] {
+  background-image: url('./images/Avatar-3.svg');
+  content: url('./images/Avatar-3.svg');
+}
+
+[src*='profile_default_03'],
+[style*='profile_default_03'] {
+  background-image: url('./images/Avatar-4.svg');
+  content: url('./images/Avatar-4.svg');
+}
+
+[src*='profile_default_04'],
+[style*='profile_default_04'] {
+  background-image: url('./images/Avatar-5.svg');
+  content: url('./images/Avatar-5.svg');
+}
+
+[src*='profile_default_05'],
+[style*='profile_default_05'] {
+  background-image: url('./images/Avatar-6.svg');
+  content: url('./images/Avatar-6.svg');
+}
+
+[src*='profile_default_06'],
+[style*='profile_default_06'] {
+  background-image: url('./images/Avatar-7.svg');
+  content: url('./images/Avatar-7.svg');
+}
+
+[src*='profile_default_07'],
+[style*='profile_default_07'] {
+  background-image: url('./images/Avatar-8.svg');
+  content: url('./images/Avatar-8.svg');
+}
+
+/*새글 아이콘*/
+img.newpost {
+  padding-left: 1px;
+  vertical-align: middle;
+  width: 15px !important;
+}
+
+/* 코드 하이라이트 관련*/
+pre[data-ke-type='codeblock'] {
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0 0 20px 0;
+  font-size: 17px;
+  line-height: 17px;
+  border-bottom: 2px solid #818181;
+}
+
+pre[data-ke-type='codeblock'] > code {
+  display: block;
+  overflow-x: auto;
+  font-family: consolas, monospace;
+}
+pre[data-ke-type='codeblock'] > code.lnWrap {
+  position: relative;
+  padding-left: 40px;
+}
+
+pre[data-ke-type='codeblock'] > code .ln[data-ln]::before,
+pre[data-ke-type='codeblock'] > code .ln[data-ln--before]::before {
+  content: attr(data-ln);
+}
+
+pre[data-ke-type='codeblock'] > code .ln,
+pre[data-ke-type='codeblock'] > code .lnBorder {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 40px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+pre[data-ke-type='codeblock'] > code .lnBorder {
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-right-color: #ccc;
+}
+
+pre[data-ke-type='codeblock'] > code .ln {
+  z-index: 0;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+pre[data-ke-type='codeblock'] > code .lc {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding-left: 10px;
+}
+pre[data-ke-type='codeblock'] > code.noline .lc {
+  padding-left: 0;
+}
+
+pre[data-ke-type='codeblock'] > code .ln.marker {
+  background-color: rgba(40, 70, 100, 1);
+  background: linear-gradient(to left, rgba(40, 70, 100, 1) 60%, transparent);
+  color: white !important;
+}
+pre[data-ke-type='codeblock'] > code .lc.marker {
+  background-color: rgba(40, 70, 100, 1);
+  background: linear-gradient(to right, rgba(40, 70, 100, 1) 80%, transparent);
+}
+
+pre[data-ke-type='codeblock'] > code .lnA {
+}
+pre[data-ke-type='codeblock'] > code .lnB {
+}
+
+pre[data-ke-type='codeblock'] > code .colBox {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+  margin-right: 4px;
+  outline: 1px solid grey;
+}
+
+pre[data-ke-type='codeblock'] > code .hover,
+pre[data-ke-type='codeblock'] > code .clicked {
+  outline: solid 1px gold;
+}
+pre[data-ke-type='codeblock'] > code .solo:hover {
+  color: red;
+}
